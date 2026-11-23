@@ -1,0 +1,44 @@
+.game-header {
+	background: var(--bg-panel);
+	padding: 10px 20px;
+	border-bottom: 2px solid var(--accent-blue);
+	display: flex;
+	justify-content: space-between;
+}
+
+.game-container {
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+}
+
+.lore-panel {
+	width: 25%;
+	padding: 20px;
+	background: #0f3460;
+	border-right: 1px solid var(--accent-blue);
+	overflow-y: auto;
+}
+
+.editor-panel {
+	width: 50%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.result-panel {
+	width: 25%;
+	padding: 20px;
+	background: var(--bg-panel);
+	border-left: 1px solid var(--accent-blue);
+	overflow-y: auto;
+}
+
+.error-msg {
+	color: var(--accent-red);
+	background: rgba(233, 69, 96, 0.1);
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 0.9em;
+}

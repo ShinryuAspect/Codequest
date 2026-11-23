@@ -1,0 +1,234 @@
+.map-page {
+	background: #0a0a12 url('../img/map-texture.png');
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-hud {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.95) 0%,
+		rgba(20, 20, 35, 0.9) 100%
+	);
+	border-bottom: 3px solid #ffd700;
+	padding: 0.5rem 2rem;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	height: 85px;
+	box-sizing: border-box;
+}
+
+.user-identity {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 10px;
+	min-width: 250px;
+}
+
+.avatar-circle {
+	width: 54px;
+	height: 54px;
+	background: #1a1a2e;
+	border: 3px solid #ffd700;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8rem;
+	box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+	flex-shrink: 0;
+	position: relative;
+	z-index: 2;
+}
+
+.user-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 15px;
+	text-align: left;
+}
+
+.user-name {
+	font-weight: 900;
+	color: #ffd700;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	line-height: 1;
+	margin: 0;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.user-class {
+	font-size: 0.8rem;
+	color: #888;
+	margin-top: 4px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.stats-container {
+	display: flex;
+	gap: 2rem;
+	background: rgba(255, 255, 255, 0.05);
+	padding: 8px 25px;
+	border-radius: 30px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+	text-align: center;
+}
+
+.stat-item .label {
+	display: block;
+	font-size: 0.6rem;
+	color: #ffd700;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.stat-item .value {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.hud-actions {
+	display: flex;
+	gap: 12px;
+}
+
+.hud-btn {
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.1);
+	width: 42px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	font-size: 1.3rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.2s ease;
+}
+
+.hud-btn:hover {
+	background: #ffd700;
+	transform: translateY(-2px);
+}
+
+.map-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 2rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.map-title {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.mission-grid {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.mission-node {
+	background: rgba(20, 20, 35, 0.95);
+	border: 2px solid #333;
+	padding: 30px;
+	width: 280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 20px;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+.mission-node:not(.locked):hover {
+	border-color: #ffd700;
+	transform: translateY(-10px);
+}
+
+.mission-node.locked {
+	opacity: 0.5;
+	filter: grayscale(1);
+	border-style: dashed;
+}
+
+.node-icon {
+	font-size: 4rem;
+	margin-bottom: 15px;
+	filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.2));
+}
+
+.mission-node h3 {
+	margin: 10px 0;
+	color: #fff;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.mission-node p {
+	margin: 5px 0 20px 0;
+	color: #888;
+	font-size: 0.9rem;
+}
+
+.btn-play {
+	width: 100%;
+	padding: 12px 0;
+	background: #ffd700;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 10px;
+	text-align: center;
+	transition:
+		background 0.2s,
+		transform 0.2s;
+}
+
+.btn-play:hover {
+	background: #fff;
+	transform: scale(1.05);
+}
+
+.mission-node.locked {
+	opacity: 0.6;
+	filter: grayscale(1);
+	border-style: dashed;
+	cursor: not-allowed;
+}
+
+.lock-msg {
+	color: #e74c3c;
+	font-weight: bold;
+	margin-top: 15px;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}

@@ -1,0 +1,86 @@
+.landing-bg {
+    background: radial-gradient(circle, #1a1a2e 0%, #0f0f1b 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.main-title h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 3rem;
+}
+
+.lore-box {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.lore-box strong {
+    color: #2ecc71;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-portal {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000;
+    background: #ffd700;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-portal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    background: #fff;
+}
+
+.btn-portal.secondary {
+    background: transparent;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+}
+
+.btn-portal.secondary:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+#portal-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle, #1a1a2e 0%, #080810 100%);
+}

@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+config/config.local.php
+vendor/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+codequest/config/gemini_api.local.php

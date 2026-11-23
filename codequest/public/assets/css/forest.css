@@ -1,0 +1,23 @@
+#render-area {
+	flex: 1;
+	background: #1b2712;
+	border: 3px inset #2d4121;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-image: radial-gradient(#2d4121 1px, transparent 1px);
+	background-size: 20px 20px;
+}
+
+#cofre {
+	transition: all 0.5s ease;
+}
+
+#forest-msg {
+	margin-top: 20px;
+	color: var(--terminal-green);
+	font-style: italic;
+}
